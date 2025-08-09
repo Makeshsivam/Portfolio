@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import tailwindcss from '@tailwindcss/vite';
+
 export default defineConfig({
-  plugins: [react()],
+  base: '/Portfolio/',  // <-- add this to set base path for GitHub Pages
+  plugins: [react()],   // only react plugin here
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
-    plugins: [react(), tailwindcss()],
   },
 });
