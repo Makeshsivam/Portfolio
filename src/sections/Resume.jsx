@@ -14,7 +14,7 @@ function Resume() {
           During this internship, I worked on data visualization and business intelligence using Power BI. I was responsible for building interactive dashboards, performing data cleaning, and delivering insights through visual reports.
         </p>
         <img
-          src={DatascienceImg} alt="Power BI Project"
+          src={PowerBIImg} alt="Power BI Project"
           className="resume-image"
         />
       </div>
