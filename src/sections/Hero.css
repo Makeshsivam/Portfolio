@@ -1,0 +1,96 @@
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1); /* translucent card */
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 255, 225, 0.3);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 12px 50px rgba(0, 255, 225, 0.6);
+}
+
+.hero-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.hero-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 40px rgba(0, 255, 225, 0.7);
+}
+
+.intro-text {
+  font-size: 1.5rem;
+  color: #ffffffaa;
+  margin-bottom: 0.2rem;
+}
+
+.hero-name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #00ffe1;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.typed-role {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #f8f8f8;
+  min-height: 1.5em; /* prevent layout shift */
+  animation: pulse 2s infinite;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.cursor {
+  display: inline-block;
+  color: #00ffe1;
+  animation: blink 1s steps(2, start) infinite;
+  margin-left: 2px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.hero-section {
+  height: auto; /* Change from 100vh to auto so it fits content height */
+  min-height: 50vh; /* Optional: keep minimum height but not full viewport */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}

@@ -1,0 +1,108 @@
+.resume-section {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.resume-section h2 {
+  font-size: 2.5rem;
+  color: #00ffe1;
+  margin-bottom: 2rem;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.internship {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 255, 225, 0.2);
+  max-width: 800px;
+  width: 90%;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.internship:hover {
+  box-shadow: 0 12px 50px rgba(0, 255, 225, 0.5);
+  transform: translateY(-5px);
+}
+
+.internship h3 {
+  font-size: 1.8rem;
+  color: #00ffe1;
+  margin-bottom: 1rem;
+}
+
+.internship p {
+  font-size: 1.1rem;
+  color: #ffffffcc;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.resume-image {
+  width: 70%;               /* Make image smaller */
+  max-width: 400px;         /* Limit max size */
+  height: auto;
+  display: block;           /* Needed to center with margin auto */
+  margin: 0 auto;           /* Horizontally center */
+  border-radius: 10px;
+  border: 3px solid #ffffff33;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 40px rgba(0, 255, 225, 0.7);
+}
+
+
+/* Reusing existing animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .resume-section {
+    padding: 2rem 1rem;
+  }
+
+  .resume-section h2 {
+    font-size: 2rem;
+  }
+
+  .internship {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .internship h3 {
+    font-size: 1.4rem;
+  }
+
+  .internship p {
+    font-size: 1rem;
+  }
+
+  .resume-image {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* Optional: Add hover effect for touch devices using :active and JS hint */
+@media (hover: none) {
+  .resume-image:active {
+    transform: scale(1.03);
+    box-shadow: 0 8px 40px rgba(0, 255, 225, 0.7);
+  }
+}

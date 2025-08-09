@@ -1,0 +1,82 @@
+.skills-section {
+  height: auto; /* fits content height */
+  min-height: 50vh; /* optional minimum height */
+  padding: 2rem 1rem;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  text-align: center;
+}
+
+.skills-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #00ffe1;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* space between containers */
+  flex-wrap: wrap; /* stack on small screens */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1); /* translucent */
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 255, 225, 0.3);
+  max-width: 350px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.container:hover {
+  box-shadow: 0 12px 50px rgba(0, 255, 225, 0.6);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-item {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #e0f7fa;
+}
+
+.skill-item svg {
+  color: #00ffe1; /* icon color */
+  min-width: 24px;
+  min-height: 24px;
+}
+
+/* Responsive: stack containers vertically on small screens */
+@media (max-width: 720px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
