@@ -94,3 +94,57 @@
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #ffffff;
 }
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 2rem;
+    max-width: 90%;
+  }
+
+  .hero-image {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 1rem;
+  }
+
+  .intro-text {
+    font-size: 1.2rem;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .typed-role {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .hero-image {
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero-name {
+    font-size: 1.6rem;
+  }
+
+  .typed-role {
+    font-size: 1rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 500px; /* increase from 400px to 500px for laptops */
+  }
+}
