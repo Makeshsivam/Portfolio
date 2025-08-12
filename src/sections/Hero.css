@@ -1,15 +1,19 @@
 .hero-section {
-  height: 100vh;
+  height: auto; /* fits content height */
+  padding-top: 1rem;    /* reduced top padding */
+  padding-bottom: 1rem; /* reduced bottom padding */
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  /* remove margin if any */
+  margin: 0;
 }
 
+/* Container styles */
 .container {
-  background: rgba(255, 255, 255, 0.1); /* translucent card */
+  background: rgba(255, 255, 255, 0.1);
   padding: 2rem 3rem;
   border-radius: 15px;
   box-shadow: 0 8px 30px rgba(0, 255, 225, 0.3);
@@ -18,6 +22,7 @@
   text-align: center;
   backdrop-filter: blur(10px);
   transition: box-shadow 0.3s ease;
+  margin: 0 auto; /* center horizontally, no vertical margin */
 }
 
 .container:hover {
@@ -32,7 +37,7 @@
   border: 4px solid #ffffff;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem; /* slightly reduced */
 }
 
 .hero-image:hover {
@@ -43,13 +48,13 @@
 .intro-text {
   font-size: 1.5rem;
   color: #ffffffaa;
-  margin-bottom: 0.2rem;
+  margin: 0 0 0.3rem 0; /* no top margin, small bottom */
 }
 
 .hero-name {
   font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin: 0 0 0.7rem 0; /* no top margin, small bottom */
   color: #00ffe1;
   animation: fadeIn 1.5s ease-in;
 }
@@ -58,10 +63,10 @@
   font-size: 1.4rem;
   font-weight: 500;
   color: #f8f8f8;
-  min-height: 1.5em; /* prevent layout shift */
+  min-height: 1.5em; 
   animation: pulse 2s infinite;
   display: inline-block;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem; /* small margin */
 }
 
 .cursor {
@@ -71,31 +76,7 @@
   margin-left: 2px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.7; }
-  100% { opacity: 1; }
-}
-
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  50.01%, 100% { opacity: 0; }
-}
-.hero-section {
-  height: auto; /* Change from 100vh to auto so it fits content height */
-  min-height: 50vh; /* Optional: keep minimum height but not full viewport */
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: #ffffff;
-}
-
-/* Responsive Enhancements */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .container {
     padding: 1.5rem 2rem;
@@ -105,7 +86,6 @@
   .hero-image {
     width: 160px;
     height: 160px;
-    margin-bottom: 1rem;
   }
 
   .intro-text {
@@ -143,8 +123,26 @@
     font-size: 1rem;
   }
 }
+
 @media (min-width: 1024px) {
   .container {
-    max-width: 500px; /* increase from 400px to 500px for laptops */
+    max-width: 500px;
   }
+}
+
+/* Keyframes remain unchanged */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
 }

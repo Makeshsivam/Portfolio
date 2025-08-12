@@ -1,15 +1,17 @@
 .projects-section {
-  padding: 4rem 1rem;
+  padding: 2rem 1rem; /* Reduced vertical padding */
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #ffffff;
   text-align: center;
+  margin: 0; /* Remove margin to avoid extra space */
 }
 
 .projects-section h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #00ffe1;
-  margin-bottom: 2.5rem;
+  margin-top: 0;          /* Remove top margin */
+  margin-bottom: 1.5rem;  /* Smaller bottom margin */
   animation: fadeIn 1s ease-in;
 }
 
@@ -26,11 +28,12 @@
   padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 255, 225, 0.2);
-  max-width: 320px;
+  max-width: 280px; /* keep max-width smaller for better layout */
   width: 100%;
   text-align: center;
   backdrop-filter: blur(8px);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  margin: 0 auto; /* center individual cards */
 }
 
 .project-card:hover {
@@ -84,16 +87,12 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.project-card {
-  /* keep previous styles */
-  margin: 0 auto; /* center individual cards if needed */
-  max-width: 280px;
-}
+
 .projects-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; /* or use space-between */
-  gap: 20px; /* gap helps keep vertical spacing on wrap */
+  justify-content: space-evenly;
+  gap: 20px;
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
@@ -117,11 +116,12 @@
 /* Small devices (phones) */
 @media (max-width: 768px) {
   .projects-section {
-    padding: 3rem 1rem;
+    padding: 1.5rem 1rem; /* further reduced padding */
   }
 
   .projects-section h2 {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
   .project-card {

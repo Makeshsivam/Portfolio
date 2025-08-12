@@ -1,8 +1,7 @@
 /* Contact.css */
 
 .contact-section {
-  height: auto;             /* fit content height */
-  min-height: 50vh;         /* optional minimum height */
+  height: auto;             /* fit content height */    
   padding: 2rem 1rem;       /* vertical padding */
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #ffffff;

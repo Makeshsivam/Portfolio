@@ -9,6 +9,7 @@ import Resume from '../sections/Resume';
 
 
 
+
 export default function Home() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function Home() {
         <Resume/>
         
         <Contact />
+        
       </main>
       <Footer />
     </>
